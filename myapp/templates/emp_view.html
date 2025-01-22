@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: none;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 30px;
+            border-radius: 8px;
+        }
+        h1 {
+            margin: 0;
+            flex-grow: 1;
+            text-align: center;
+        }
+        .home-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0056b3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .home-button:hover {
+            background-color: #003f7f;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #48691336;
+            color: black;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #131415;
+            color:white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .action-buttons a {
+            margin-right: 5px;
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+        .action-buttons a:first-child {
+            background-color: red;
+            color: white;
+        }
+        .action-buttons a:last-child {
+            background-color: #21e528;
+            color: white;
+        }
+   
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="home-button">Home</a>
+        <h1>Employee Information</h1>
+    </header>
+
+    <table>
+        <thead>
+            <tr>
+                <th>SR.NO</th>
+                <th>EMP-NAME</th>
+                <th>EMP-ID</th>
+                <th>EMP-AGE</th>
+                <th>EMP-PHONE-NO</th>
+                <th>EMP-DEPARTMENT</th>
+                <th>EMP-WORKING</th>
+                <th>EMP-ADDRESS</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Example Row -->
+            {% for e in emps %}
+            <tr align="center">
+                <td>{{forloop.counter}}</td>
+                <td>{{e.emp_name}}</td>
+                <td>{{e.emp_id}}</td>
+                <td>{{e.emp_age}}</td>
+                <td>{{e.emp_phone_no}}</td>
+                <td>{{e.emp_department}}</td>
+                <td>{{e.emp_working}}</td>
+                <td>{{e.emp_address}}</td>
+                <td class="action-buttons">
+                    <a href="/emp/delete-emp/{{e.id}}">Delete</a>
+                    <a href="/emp/update-emp/{{e.id}}">Update</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+  
+</body>
+</html>

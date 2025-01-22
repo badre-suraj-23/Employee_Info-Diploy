@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Employee Management System, your complete solution for managing employees efficiently.">
+    <title>Home - Employee Management System</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color:  #4CAF50;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer .contact-info {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            
+        }
+
+        /* Responsive Footer */
+        @media (max-width: 768px) {
+            footer .container {
+                padding: 0 10px;
+            }
+
+            footer p {
+                font-size: 0.9rem;
+            }
+
+            footer .contact-info {
+                font-size: 0.8rem;
+            }
+        }
+        h1{
+            color: rgb(22, 185, 130);
+        }
+        h1:hover{
+            background-color:   rgb(242, 242, 168);
+            font-size: 30px;
+
+        }
+        h2:hover{
+            color:  #04AA6D;
+            font-size: 25px;
+        }
+       
+        
+    </style>
+</head>
+
+<body>
+    {% include 'emp/navbar.html' %}
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1><a href="#home">My First Django Project</a></h1>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <div class="container">
+                <h1>Welcome to Employee Management System</h1>
+                <p>
+                    "I'm Suraj Badre and I'm super excited to welcome you to My project. Think of me as your guide in this journey."
+                </p>
+                <p>
+                    "Hi and a huge welcome from Team [Brand/Company Name]! We're thrilled to have you with us. Get ready for a memorable time and a great experience."
+                </p>
+                <p>
+                    "A big hello from Team [Brand/Company Name]! Think of us as your friendly neighborhood team, always ready to lend a hand or an ear."
+                </p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>
+                    Our aim is to provide all the essential tools and facilities to help organizations develop fast. With our Employee Management System, you can easily manage personal details, payroll systems, and leave status of employees, making it easier for you to focus on your company’s growth.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="container">
+                <h2>Trusted by Leading Companies</h2>
+                <p>
+                    "Employee Management System has transformed the way we manage our employees. It's easy to use and has helped us streamline our processes."
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <h4>&copy; 2024 Employee Management System. All rights reserved.</h4>
+            <h4>
+                <a href="/">Home</a> | 
+                <a href="/about">About</a> | 
+                <a href="#services">Services</a> |
+                <a href="https://github.com/badre-suraj-23" target="_blank">gitHub</a> |
+                <a href="https://linkedin.com/in/suraj-badre-000808213" target="_blank">linkedin</a> |
+                <a href="https://twitter.com" target="_blank">Twitter</a> | 
+                 
+                <a href="#contact">Contact</a>
+            </h4>
+            <div class="contact-info">
+                <h4>Email: Badresuraj@gmail.com | Phone: +91 8766420527</h4>
+        
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

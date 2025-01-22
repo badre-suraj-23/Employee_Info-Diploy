@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Careers at Asha Startup. Join our team and be a part of our success.">
+    <title>Careers - Asha Startup</title>
+    <style>
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 30px;
+            background-color: hsl(212, 97%, 54%);
+            color: white;
+            position:relative;
+            top: 0;
+            z-index: 1000;
+            border-radius: 10px;
+        }
+
+        .navbar .nav-left,
+        .navbar .nav-center {
+            flex: 1;
+        }
+
+        .navbar .nav-left a,
+        .navbar .nav-center a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar .nav-left {
+            text-align: left;
+        }
+
+        .navbar .nav-center {
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 30px;
+            border-radius: 10px;
+
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            /* .navbar .nav-left,
+            .navbar .nav-center {
+                text-align: center;
+                margin: 5px 0;
+                margin-right: 100px;
+                 */
+            }
+            .navvbar .nav-center{
+                text-size-adjust: left 100px;
+
+            }
+    
+        .nav-center{
+            margin-right: 360px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <!-- Home Link on Left -->
+            <div class="nav-left">
+                <a href="/">Home</a>
+            </div>
+            <!-- Career Link in Center -->
+            <div class="nav-center">
+              <h1>  <a href="#company-info">Career</a></h1>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Company Information Section -->
+        <section id="company-info">
+            <div class="container">
+                <h2 style="color: #4CAF50; text-align: center;">About Asha Startup</h2>
+                <p>At Asha Startup, we are committed to fostering a positive, innovative work environment that nurtures growth and creativity. Our team is driven by a shared vision of excellence, and we value collaboration, diversity, and continuous learning. We believe in empowering our employees with the tools and opportunities to succeed.</p>
+                <h3 style="color: #007BFF;">Our Culture & Values</h3>
+                <ul>
+                    <li>Integrity: We uphold the highest standards of honesty and fairness.</li>
+                    <li>Innovation: We encourage creative thinking and problem-solving.</li>
+                    <li>Collaboration: We believe in teamwork and open communication.</li>
+                    <li>Growth: We support continuous development and learning.</li>
+                </ul>
+                <h3 style="color: #007BFF;">Benefits</h3>
+                <ul>
+                    <li>Competitive Salary</li>
+                    <li>Health and Wellness Programs</li>
+                    <li>Retirement Savings Plan</li>
+                    <li>Paid Time Off</li>
+                    <li>Flexible Work Hours</li>
+                    <li>Employee Recognition Programs</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Current Job Openings Section -->
+        <section id="job-openings">
+            <div class="container">
+                <h2 style="color:#007BFF;">Current Job Openings</h2>
+                <p>We are looking for passionate and skilled individuals to join our team. Below are the available job openings:</p>
+                <ul>
+                    <li>
+                        <h3 style="color: #007BFF;">Software Developer</h3>
+                        <p>Location: Remote</p>
+                        <p>Job Description: Design, develop, and maintain software applications. Collaborate with cross-functional teams to deliver high-quality solutions.</p>
+                        <a href="#apply" class="apply-now">Apply Now</a>
+                    </li>
+                    <li>
+                        <h3 style="color:#007BFF;">HR Specialist</h3>
+                        <p>Location: India</p>
+                        <p>Job Description: Employee relations, and benefits administration. Develop and implement HR policies and programs.</p>
+                        <a href="#apply" class="apply-now">Apply Now</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Apply Now Section -->
+        <section id="apply">
+            <div class="container">
+                <h2 style="color:#007BFF;">Apply for a Job</h2>
+                <p>If you're interested in any of the open positions, please fill out the form below to apply.</p>
+                <form action="submit-application.html" method="POST">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="position">Position Applied For:</label>
+                    <input type="text" id="position" name="position" required>
+
+                    <label for="resume">Upload Your Resume:</label>
+                    <input type="file" id="resume" name="resume" required>
+
+                    <button type="submit">Submit Application</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Asha Startup. All Rights Reserved.</p>
+        <p>
+            <a href="#company-info">About Us</a> |
+            <a href="#privacy-policy">Privacy Policy</a> |
+            <a href="#contact">Contact Us</a> |
+            <a href="https://github.com/badre-suraj-23" target="_blank">gitHub</a> |
+            <a href="https://linkedin.com/in/suraj-badre-000808213" target="_blank">linkedin</a> | +918766420527
+
+        </p>
+    </footer>
+</body>
+
+</html>

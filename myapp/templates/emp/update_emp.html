@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Employee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(142, 161, 158);
+            color: white;
+        }
+
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            position: relative;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .home-button {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .home-button:hover {
+            background-color: #003f7f;
+        }
+
+        .form-container {
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #131313;
+            border-radius: 8px;
+            background-color: #48691336;
+            
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="number"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="home-button">Home</a>
+        <h1>Update Employee</h1>
+    </header>
+
+    <div class="form-container">
+        <h2>Update Employee Information</h2>
+        <form action="/emp/do-update-emp/{{emp.id}}" method="POST">
+            {% csrf_token %}
+
+            <!-- Employee Name -->
+            <label for="emp-name">Employee Name:</label>
+            <input type="text" id="emp-name" name="emp-name" value="{{emp.emp_name}}" required>
+
+            <!-- Employee ID -->
+            <label for="emp-id">Employee ID:</label>
+            <input type="text" id="emp-id" name="emp-id" value="{{emp.emp_id}}" required>
+
+            <!-- Employee Age -->
+            <label for="emp-age">Employee Age:</label>
+            <input type="number" id="emp-age" name="emp-age" value="{{emp.emp_age}}" required>
+
+            <!-- Phone Number -->
+            <label for="phone-no">Phone Number:</label>
+            <input type="tel" id="phone-no" name="phone-no" value="{{emp.emp_phone_no}}" required>
+
+            <!-- Employee Address -->
+            <label for="emp-address">Employee Address:</label>
+            <textarea id="emp-address" name="emp-address">{{emp.emp_address}}</textarea>
+
+            <!-- Employee Working Checkbox -->
+            <label for="emp-working">Working:</label>
+            <input {% if emp.emp_working %} checked {% endif %} type="checkbox" id="emp-working" name="emp-working">
+
+            <!-- Department -->
+            <label for="emp-department">Department:</label>
+            <select id="emp-department" name="emp-department">
+                <option value="">Select Department</option>
+                <option value="CS" {% if emp.emp_department == 'CS' %} selected {% endif %}>Computer Science</option>
+                <option value="IT" {% if emp.emp_department == 'IT' %} selected {% endif %}>Information Technology</option>
+                <option value="ME" {% if emp.emp_department == 'ME' %} selected {% endif %}>Mechanical Engineering</option>
+                <option value="Marketing" {% if emp.emp_department == 'Marketing' %} selected {% endif %}>Marketing</option>
+                <option value="Agriculture" {% if emp.emp_department == 'Agriculture' %} selected {% endif %}>Agriculture</option>
+            </select>
+
+            <!-- Update Button -->
+            <div style="text-align: center;">
+                <button type="submit">Update Employee</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
